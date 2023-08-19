@@ -17,7 +17,11 @@ RUNOPT		+= -L work
 RUNOPT		+= -l $(LOG_NAME)
 RUNOPT		+= +test_name=$(TST)
 
-comp :
+prep :
+	vlib work
+	vmap work
+
+comp : prep
 	vlog $(VLOG_OPT)
 
 run :

@@ -56,10 +56,10 @@ module tb ();
         .P_DATA_WIDTH   ( P_DATA_WIDTH  )
     ) AXI_LITE_MASTER   ( .* );
 
-    AXI_LITE_MODEL #(
+    AXI_LITE_SLAVE #(
         .P_ADDR_WIDTH   ( P_ADDR_WIDTH  ),
         .P_DATA_WIDTH   ( P_DATA_WIDTH  )
-    ) AXI_LITE_MODEL    ( .* );
+    ) AXI_LITE_SLAVE    ( .* );
 
     `include "test_list.sv"
 
